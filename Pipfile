@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+google-genai = "==1.20.0"
+pydantic = "==2.11.7"
+fastapi = "*"
+
+[dev-packages]
+pytest = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+serve = "python -m src"
