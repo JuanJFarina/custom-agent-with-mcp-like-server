@@ -7,12 +7,16 @@ name = "pypi"
 google-genai = "==1.20.0"
 pydantic = "==2.11.7"
 fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 pytest = "*"
+exceptiongroup = "*"
 
 [requires]
 python_version = "3.10"
 
 [scripts]
-serve = "python -m src"
+test = "pytest tests"
+agent = "python -m custom_agent_with_mcp_like_server"
+server = "uvicorn custom_agent_with_mcp_like_server.api.app:app --reload"

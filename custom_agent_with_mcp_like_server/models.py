@@ -1,23 +1,23 @@
 from pydantic import BaseModel, TypeAdapter
 
+
+class Tool(BaseModel):
+    name: str
+    description: str
+
+
+Tools = TypeAdapter[list[Tool]]
+
+
 class ToolCall(BaseModel):
     name: str
     parameters: dict[str, str]
 
 
-class Tool(BaseModel):
-    name: str
-    function_signature: str
-    description: str
-    parameters_description: dict[str, str]
-
-Tools = TypeAdapter[list[Tool]]
-
-
 class ToolCompletion(BaseModel):
     tool_called: str
     parameters: dict[str, str]
-    return_value: str
+    returned_value: str
 
 
 class UserQuestion(BaseModel):

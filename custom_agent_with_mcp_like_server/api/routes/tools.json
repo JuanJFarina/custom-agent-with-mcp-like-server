@@ -1,0 +1,7 @@
+[
+    {
+        "name": "reduce_to_numbers",
+        "description": "Body parameters: content (str): Any string. Returns: numbers (str): A numeric representation of the given string according to numerology rules.",
+        "method": "POST"
+    }
+]
