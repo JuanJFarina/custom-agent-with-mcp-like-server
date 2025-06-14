@@ -3,7 +3,7 @@ import os
 
 
 class ToolRepresentation(BaseModel):
-    name: str
+    tool_name: str
     description: str
     url: str = f"{os.getenv('BASE_URL', '')}/api/"
     method: str

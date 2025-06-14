@@ -1,16 +1,16 @@
 from pydantic import BaseModel, TypeAdapter
 
 
-class Tool(BaseModel):
-    name: str
+class AgentTool(BaseModel):
+    tool_name: str
     description: str
 
 
-Tools = TypeAdapter[list[Tool]]
+Tools = TypeAdapter[list[AgentTool]]
 
 
 class ToolCall(BaseModel):
-    name: str
+    tool_name: str
     parameters: dict[str, str]
 
 
